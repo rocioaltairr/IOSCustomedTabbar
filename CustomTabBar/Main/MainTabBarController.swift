@@ -8,7 +8,7 @@
 
 import UIKit
 
-let arrTabsData = [["name":"訂票紀錄",
+let arrTabData = [["name":"訂票紀錄",
                     "img":UIImage(named:"tab1")!,
                     "imgSelected":UIImage(named:"tab1")!],
                    ["name":"林鐵訊息",
@@ -35,24 +35,24 @@ class MainTabBarController: UITabBarController {
         let tabbarItem4 = UITabBarItem(title: arrTabData[3]["name"] as? String, image: arrTabData[3]["img"] as? UIImage, tag: 3)
         
         // 設定tabbarController
-        let vcTab1 = OrderVC()
+        let vcTab1 = FirstVC()
         vcTab1.tabBarItem = tabbarItem1;
         
         
-        let vcTab2 = OrderVC()
+        let vcTab2 = FirstVC()
         vcTab2.tabBarItem = tabbarItem2;
         
-        let vcTab3 = OrderVC()
+        let vcTab3 = FirstVC()
         vcTab3.tabBarItem = tabbarItem3;
         
         
-        let vcTab4 = OrderVC()
+        let vcTab4 = FirstVC()
         vcTab4.tabBarItem = tabbarItem4;
         
         
         let tabControllers = [vcTab1,vcTab2,vcTab3,vcTab4]
         self.tabBarController?.setViewControllers(tabControllers, animated: true)
-        self.viewControllers = tabControllers
+        //self.viewControllers = tabControllers
           
     }
     
